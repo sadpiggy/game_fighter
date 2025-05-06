@@ -6,6 +6,7 @@
 #include "weapon.hpp"
 #include "utils.hpp"
 
+
 int main() {
     std::cout << "hello fight game!\n";
 
@@ -95,12 +96,13 @@ int main() {
             if (collision) {
                 collision_enemy = true;
                 if (player.has_weapon){
-                    //TODO: 删去敌人
                     enemy_queue.erase(enemy_queue.begin()+i);
                 }else{
                     running = false;
                     fail(event, renderer);
-                    break;
+                    destroy_SDL(renderer, window);
+                    return 0;
+                    // break;
                 }
             }else{
                 ++i;
@@ -125,9 +127,6 @@ int main() {
         SDL_Delay(100);
     }
 
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
-    std::cout<<"quit!!\n";
+    destroy_SDL(renderer, window);
     return 0;
 }

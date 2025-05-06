@@ -1,5 +1,6 @@
 #include<utils.hpp>
 #include <SDL2/SDL.h>
+#include <iostream>
 
 void fail(SDL_Event& event, SDL_Renderer* renderer){
     // 输出 Game Over
@@ -19,4 +20,11 @@ void fail(SDL_Event& event, SDL_Renderer* renderer){
         }
         SDL_Delay(100); // 避免 CPU 过载
     }
+}
+
+void destroy_SDL(SDL_Renderer* renderer, SDL_Window* window){
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+    std::cout<<"quit!!\n";
 }
