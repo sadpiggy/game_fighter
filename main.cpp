@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "fighter.hpp"
+#include "enemy.hpp"
+#include "player.hpp"
 #include <deque>
 #include "weapon.hpp"
 #include "utils.hpp"

@@ -7,7 +7,7 @@ bash run.sh
 ```
 
 
-
+- [x] 对于weapon/player/enemy进行合适的抽象
 - [ ] 封装main.cpp中的游戏逻辑
 - [ ] 封装为server和client
 - [ ] 支持联机
