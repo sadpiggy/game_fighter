@@ -12,3 +12,12 @@ bash run.sh
 - [ ] 封装为server和client
 - [ ] 支持联机
 - [ ] 使用美术素材
+
+# 环境配置
+项目依赖于：
+1. SDL2
+2. sdl2_ttf
+```
+brew install sdl2
+brew install sdl2_ttf
+```

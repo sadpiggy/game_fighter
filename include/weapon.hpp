@@ -10,6 +10,6 @@ public:
         color_b = 255;
     }
 
-    void handle_input(SDL_Event& event){};  // 注意加 virtual
+    void handle_input(SDL_Event& event){};  
     void update(){};
 };
